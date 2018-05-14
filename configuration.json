@@ -1,0 +1,11 @@
+{
+ "db": {
+    "host": "localhost",
+    "port": 8086,
+    "name": "example"
+ },
+ "gps": {
+    "baudrate": 9600,
+    "serialport": "/dev/ttyS10"
+ }
+}
