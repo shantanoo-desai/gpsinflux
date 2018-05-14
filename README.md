@@ -21,6 +21,10 @@ A Rudimentary Library written in `Python3` which parses information from**Adafru
 		-	fields: `lat`, `lat_dir`, `lon`, `lon_dir`, `alt`, `spd_over_grnd`
 	-	DB Port: **8086**
 
+### Dependencies
+
+use `pip3 install` with the following: - `pyserial` - `pynmea2` - `influxdb`
+
 ### What it Lacks
 
 -	proper `Exception` handling
