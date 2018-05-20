@@ -8,13 +8,11 @@ A Rudimentary Library written in `Python3` which parses information from**Adafru
 -	The Library sets `$GPGGA` and `$GPRMC` sentences in the GPS Module and stores the following parameters:
 
 	-	Latitude
-	-	Latitude Direction
 	-	Longitude
-	-	Longitude Direction
 	-	Altitude
 	-	Speed Over Ground
 
--	`configuration.json` has basic information of setup of GPS and DB
+-	`conf.json` has basic information of setup of GPS and DB
 
 	-	DB Name: `example`
 		-	measurement: `gps`
@@ -25,7 +23,6 @@ A Rudimentary Library written in `Python3` which parses information from**Adafru
 
 use `pip3 install` with the following: - `pyserial` - `pynmea2` - `influxdb`
 
-### What it Lacks
+### ChangeLog
 
--	proper `Exception` handling
--	Logging configuration
+1.	pass all exceptions but log `ERROR` level exceptions in `/var/log/gps.log`
