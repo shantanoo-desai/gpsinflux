@@ -25,7 +25,7 @@ def write_serial(serialport):
     gps.set_nmea_output(gll = 0, rmc = 3, vtg = 0, gga = 3, gsa = 0, gsv = 0)
     gps.set_nmea_update_rate(1000)
 
-def read_and_parse(serialport, baudrate):
+def read_and_parse(serialport, baudrate, status = 0):
     """
     Read the GPS sentences and parse them to:
     Longitude, Longitude Degree
@@ -79,6 +79,7 @@ def read_and_parse(serialport, baudrate):
                         # measurements['lon_dir'] = dat.lon_dir
                         measurements['spd_over_grnd'] = dat.spd_over_grnd
                     # print(measurements)
+                    measurements['status'] = status
                     client.write_points([{
                             'measurement': 'gps',
                             'tags': {
