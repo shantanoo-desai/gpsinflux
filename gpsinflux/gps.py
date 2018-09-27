@@ -79,7 +79,6 @@ def read_and_parse(serialport, baudrate):
                         # measurements['lon_dir'] = dat.lon_dir
                         measurements['spd_over_grnd'] = dat.spd_over_grnd
                     # print(measurements)
-                    measurements['status'] = status
                     client.write_points([{
                             'measurement': 'gps',
                             'tags': {
